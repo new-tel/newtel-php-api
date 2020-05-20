@@ -9,8 +9,18 @@ class NewtelAPI {
 
     
     const API_BASE_PATH = 'https://api.new-tel.net/';    
-    const API_KEY = '';    
-    const API_SIGNATURE = '';    
+    
+    /**
+     *   @var string for API key
+     */
+    
+    private $apiKey;    
+    
+    /**
+     *   @var string for API signature
+     */
+    
+    private $apiSignature;    
     
     /**
      *   @var string for save token
@@ -28,6 +38,11 @@ class NewtelAPI {
    *
    * @param array $config
    */
+    
+    private function __construct( $apiKey , $apiSignature ) {
+        $this->apiKey = $apiKey;        
+        $this->apiSignature = $apiSignature;        
+    }
    
     private function setRequestBody($requestBody) {
         $this->requestBody = json_encode($requestBody);        
@@ -35,12 +50,12 @@ class NewtelAPI {
     
     
     private function setAuthToken( $requestMethod ) {
-        $this->authToken =  self::API_KEY . time() . hash('sha256',
+        $this->authToken =  $this->apiKey . time() . hash('sha256',
             $requestMethod . "\n" .    
             time() . "\n" .
-            self::API_KEY . "\n" .
+            $this->apiKey . "\n" .
             $this->requestBody . "\n" .
-            self::API_SIGNATURE);
+            $this->apiSignature);
     }
     
     public function makeRequest($requestMethod , $requestBody ) {
