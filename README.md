@@ -1,8 +1,8 @@
-# New-tel php API libary 
+# New-tel php API library 
 
 Welcome to the developer pages for the New-tel php library API. 
 
-## Feutures 
+## Features 
 
 * CallPassword (Flash call).
 * Request a call.
