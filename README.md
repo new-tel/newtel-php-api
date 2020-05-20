@@ -5,7 +5,7 @@ Welcome to the developer pages for the New-tel php library API.
 ## Features 
 
 * CallPassword (Flash call).
-* Request a call.
+* Request call.
 * Autodial call.    
 
 ## Requirements
