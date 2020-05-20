@@ -1,4 +1,4 @@
-# Newtel php API libary 
+# New-tel php API libary 
 
 Welcome to the developer pages for the New-tel php library API. 
 
