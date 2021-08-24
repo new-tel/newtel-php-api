@@ -39,5 +39,8 @@ echo $response;
 Documentation could be found at:    
 [RUS documentation]: (https://web.new-tel.net/public/New-Tel%20API%20reference.pdf)    
 
+## Swagger link
+https://swagger.new-tel.net/
+
 
 
